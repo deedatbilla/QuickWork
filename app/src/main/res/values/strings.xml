@@ -1,0 +1,44 @@
+<resources>
+    <!--facebook strings-->
+    <string name="facebook_app_id">2399275060302666</string>
+    <string name="fb_login_protocol_scheme">fb2399275060302666</string>
+    <string name="fb">Facebook</string>
+
+    <string name="app_name">Quickwork</string>
+    <string name="register_by">Sign up</string>
+    <string name="freelancer">Freelancer</string>
+    <string name="business">Business</string>
+    <string name="registered">Already have an account?</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="email">Email</string>
+    <string name="pwd">Password</string>
+    <string name="forgot">I forgot my password</string>
+    <string name="social">Sign in with</string>
+    <string name="profile_photo">Profile photo</string>
+    <string name="full_name">Full name</string>
+    <string name="contact">Contact number</string>
+    <string name="gender">Gender</string>
+    <string name="dob">Date of birth</string>
+    <string name="location">Country</string>
+    <string name="city">Select city</string>
+    <string name="password">Password</string>
+    <string name="repeat_pass">Repeat password</string>
+    <string name="first_last">First Last</string>
+    <string name="select">select</string>
+    <string name="agreement">I agree to the</string>
+    <string name="tandc">terms</string>
+    <string name="agreement_usage">of use and</string>
+    <string name="privacy_policy">privacy</string>
+    <string name="cancel">Cancel</string>
+    <string name="create">Create account</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="photo">Photo</string>
+    <string name="bus_logo">Business logo</string>
+    <string name="bus_name">Business name</string>
+    <string name="tin">Business TIN</string>
+    <string name="tin_num">Tax number</string>
+    <string name="or">or</string>
+    <string name="bus_cat">Business category</string>
+</resources>

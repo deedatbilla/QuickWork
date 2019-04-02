@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Category">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="244dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_logo_linear" />
+
+    <TextView
+        android:id="@+id/register_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo"
+        android:textSize="30sp"
+        android:textColor="@color/splashbg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/register_by"/>
+
+    <LinearLayout
+        android:id="@+id/selection"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/register_message"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+
+        <Button
+            android:id="@+id/freelanceBtn"
+            android:transitionName="personalbg"
+            style="android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/category_btn_ind"
+            android:text="@string/freelancer"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/businesBtn"
+            android:transitionName="personalbg"
+            style="android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:background="@android:color/transparent"
+            android:drawableTop="@drawable/category_btn_bus"
+            android:text="@string/business"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_below="@id/selection"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="30dp">
+
+    <TextView
+        android:id="@+id/registered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registered"
+        android:textSize="12sp"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:textSize="12sp"
+        android:textColor="@color/splashbg"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="50dp"/>
+
+</LinearLayout>
+
+
+</RelativeLayout>

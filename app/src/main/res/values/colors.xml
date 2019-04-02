@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00AEEF</color>
+    <color name="colorPrimaryDark">#00AEEF</color>
+    <color name="colorAccent">#00AEEF</color>
+    <color name="splashbg">#00AEEF</color>
+    <color name="grey">#888888</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#2F4F4F</color>
+    <color name="fb_color">#3B5991</color>
+    <color name="gg_color">#DD4B39</color>
+
+</resources>
