@@ -10,5 +10,6 @@
     <color name="dark_grey">#2F4F4F</color>
     <color name="fb_color">#3B5991</color>
     <color name="gg_color">#DD4B39</color>
+    <color name="light_grey">#F5F5F5</color>
 
 </resources>

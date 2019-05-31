@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 public class MainDash extends AppCompatActivity {
@@ -32,20 +34,21 @@ public class MainDash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_dash);
-        mToolbar = findViewById(R.id.tool_bar);
+       // mToolbar = findViewById(R.id.tool_bar);
+        ImageButton hamburger=findViewById(R.id.hamburger);
         //mToolbar.setNavigationIcon(R.drawable.hamburger);
-        setSupportActionBar(mToolbar);
-        mToolbar.setTitle("");
+        //setSupportActionBar(mToolbar);
+        //mToolbar.setTitle("");
         mDrawerLayout = findViewById(R.id.drawer_layout);
         t = new ActionBarDrawerToggle(this, mDrawerLayout,R.string.Open, R.string.Close);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+       // getSupportActionBar().setDisplayShowTitleEnabled(false);
         mDrawerLayout.addDrawerListener(t);
         t.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//       getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 //       t.setDrawerIndicatorEnabled(false);
-//       t.setHomeAsUpIndicator(R.drawable.menu_icon_big);
-        NavigationView navigationView = findViewById(R.id.nv);
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+//       t.setHomeAsUpIndicator(R.drawable.menu_icon);
+        LinearLayout navigationView = findViewById(R.id.nv);
+        hamburger.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -64,30 +67,30 @@ public class MainDash extends AppCompatActivity {
 //
 //        navemail.setText(email);
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                int id = item.getItemId();
-                switch(id)
-                {
-                    case R.id.feed:
-
-                        break;
-                    case R.id.Report:
-
-                        break;
-                    case R.id.wallet:
-
-                        break;
-                    default:
-                        return true;
-                }
-
-
-                return true;
-
-            }
-        });
+//        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+//            @Override
+//            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                int id = item.getItemId();
+//                switch(id)
+//                {
+//                    case R.id.feed:
+//
+//                        break;
+//                    case R.id.Report:
+//
+//                        break;
+//                    case R.id.wallet:
+//
+//                        break;
+//                    default:
+//                        return true;
+//                }
+//
+//
+//                return true;
+//
+//            }
+//        });
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         tabLayout = (TabLayout) findViewById(R.id.tabLayout);

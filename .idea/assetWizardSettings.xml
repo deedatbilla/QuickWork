@@ -157,7 +157,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/action/ic_delete_forever_black_24dp.xml" />
+                                      <entry key="url" value="jar:file:/C:/Program%20Files/Android/Android%20Studio/plugins/android/lib/android.jar!/images/material_design_icons/hardware/ic_keyboard_arrow_right_black_24dp.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -168,7 +168,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="00aeef" />
-                            <entry key="outputName" value="ic_delete_forever_black_24dp" />
+                            <entry key="outputName" value="ic_keyboard_arrow_right" />
                             <entry key="overrideSize" value="true" />
                             <entry key="sourceFile" value="C:\Users\jOn\Desktop\QW_FILES\google_plus.svg" />
                           </map>

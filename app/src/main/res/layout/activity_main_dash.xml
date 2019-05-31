@@ -14,7 +14,7 @@
     android:layout_height="match_parent"
     >
 
-    <android.support.v7.widget.Toolbar
+    <RelativeLayout
         android:id="@+id/tool_bar"
         android:layout_width="match_parent"
         app:contentInsetLeft="0dp"
@@ -23,16 +23,32 @@
      >
 
     <Button
+        android:id="@+id/search_bar"
+        android:layout_centerInParent="true"
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="Search"
+
         android:textAlignment="textStart"
         android:paddingStart="20dp"
         android:textAllCaps="false"
         android:textColor="@color/grey"
+
         android:background="@drawable/search_btn"/>
 
-    </android.support.v7.widget.Toolbar>
+   <ImageButton
+       android:layout_toRightOf="@id/search_bar"
+       android:layout_margin="10dp"
+       android:id="@+id/hamburger"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/menu_icon"
+       android:background="@android:color/transparent"
+
+
+
+    />
+    </RelativeLayout>
 <LinearLayout
     android:id="@+id/tab"
     android:layout_width="match_parent"
@@ -66,13 +82,58 @@
 
 
 </RelativeLayout>
-    <android.support.design.widget.NavigationView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        app:menu="@menu/navigation_menu"
+        android:orientation="vertical"
         android:layout_gravity="right"
-        app:headerLayout="@layout/nav_header"
+        android:background="@drawable/jobcardbackground"
         android:id="@+id/nv">
+        <include layout="@layout/nav_header"></include>
 
-    </android.support.design.widget.NavigationView>
+        <View
+            android:background="@color/splashbg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="vertical">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="feed"
+    android:padding="10dp"
+    android:textColor="@color/colorPrimary"/>
+               <View
+                   android:background="@color/splashbg"
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="report"
+                   android:padding="10dp"
+                   android:textColor="@color/colorPrimary"/>
+
+               <View
+                   android:background="@color/splashbg"
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"/>
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="wallet"
+                   android:padding="10dp"
+                   android:textColor="@color/colorPrimary"/>
+               <View
+                   android:background="@color/splashbg"
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"/>
+           </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
 </android.support.v4.widget.DrawerLayout>
