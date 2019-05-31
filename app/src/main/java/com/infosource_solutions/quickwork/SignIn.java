@@ -47,6 +47,7 @@ public class SignIn extends AppCompatActivity implements GoogleApiClient.OnConne
     private ImageButton customGpBtn;
     private ImageButton customFbBtn;
     private LoginButton fbLoginBtn;
+    private Button login;
     CallbackManager callbackManager;
     GoogleSignInClient mGoogleSignInClient;
     private GoogleApiClient mGoogleApiClient;
@@ -63,6 +64,15 @@ public class SignIn extends AppCompatActivity implements GoogleApiClient.OnConne
         customGpBtn = findViewById(R.id.custom_gg);
         customFbBtn = findViewById(R.id.custom_fb);
         fbLoginBtn = findViewById(R.id.login_button);
+        login=findViewById(R.id.login);
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SignIn.this,MainDash.class);
+                startActivity(intent);
+            }
+        });
+
         fbLoginBtn.setReadPermissions(Arrays.asList("email", "public_profile"));
         callbackManager = CallbackManager.Factory.create();
 

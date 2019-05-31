@@ -4,6 +4,9 @@
     <string name="fb_login_protocol_scheme">fb2399275060302666</string>
     <string name="fb">Facebook</string>
 
+    <string name="Random_text">Stronger unpacked felicity to of mistaken. Fanny at wrong table ye in. Be on easily cannot innate in lasted</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
     <string name="app_name">Quickwork</string>
     <string name="register_by">Sign up</string>
     <string name="freelancer">Freelancer</string>
@@ -41,4 +44,7 @@
     <string name="tin_num">Tax number</string>
     <string name="or">or</string>
     <string name="bus_cat">Business category</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

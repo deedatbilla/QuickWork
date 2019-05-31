@@ -88,14 +88,15 @@
                 android:text="@string/forgot"/>
 
             <Button
+                android:id="@+id/login"
                 android:layout_width="70dp"
                 android:layout_height="40dp"
-                android:text="Login"
                 android:layout_marginStart="47dp"
-                android:textColor="@color/splashbg"
-                android:textSize="12sp"
+                android:background="@drawable/ic_login_btnbg"
+                android:text="Login"
                 android:textAllCaps="false"
-                android:background="@drawable/ic_login_btnbg"/>
+                android:textColor="@color/splashbg"
+                android:textSize="12sp" />
 
         </LinearLayout>
 

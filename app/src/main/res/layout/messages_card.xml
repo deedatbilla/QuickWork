@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/category_btn_ind"
+        app:civ_border_width="0dp"
+        android:layout_alignBaseline="@id/info"
+        android:layout_margin="10dp"
+        />
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kofi"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job"
+        android:id="@+id/job_text"
+        android:layout_below="@+id/name"
+        android:textSize="15dp"
+        android:layout_toRightOf="@+id/profile_image"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:layout_below="@id/job_text"        android:layout_toRightOf="@id/profile_image"
+        android:layout_alignBottom="@id/profile_image"
+        android:text="@string/Random_text"/>
+
+</RelativeLayout>

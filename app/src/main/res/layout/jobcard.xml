@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:padding="20dp"
+        android:background="@drawable/jobcardbackground">
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+
+        >
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kofi"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/occupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Graphic Designer &amp; 3D"
+            android:textSize="10dp"
+            android:layout_below="@id/name"
+            android:paddingBottom="12dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/shortDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="As an example, you might have common UI elements that you intend to show in some areas of your app while hiding them in other"
+            android:textSize="10dp"
+            android:layout_below="@id/occupation"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/category_btn_ind"
+            app:civ_border_width="0dp"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="12dp"
+            android:layout_alignBaseline="@id/info"
+            app:civ_border_color="#FF000000"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            >
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:padding="6dp"
+                android:textColor="@color/white"
+                android:textSize="8dp"
+                android:background="@drawable/circle_shape"
+                />
+            <TextView
+                android:id="@+id/ageText"
+                android:layout_toRightOf="@id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:padding="6dp"
+                android:textSize="8dp"
+                android:layout_marginRight="12dp"
+
+                />
+
+            <TextView
+                android:id="@+id/rating"
+               android:layout_toRightOf="@+id/ageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.3"
+                android:textColor="@color/white"
+                android:padding="6dp"
+                android:textSize="8dp"
+
+                android:background="@drawable/circle_shape"
+                />
+            <TextView
+                android:id="@+id/rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating"
+                android:layout_toRightOf="@+id/rating"
+                android:padding="6dp"
+                android:textSize="8dp"
+
+                android:layout_marginRight="12dp"
+
+                />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_toRightOf="@id/rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_location_white"
+                android:text="hire"
+                android:padding="6dp"
+                android:textSize="0dp"
+
+                android:background="@drawable/circle_shape"
+                />
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_toRightOf="@id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Osu,Accra"
+                android:textSize="8dp"
+                android:padding="6dp"
+                android:layout_marginRight="12dp"
+
+                />
+            <TextView
+                android:id="@+id/hireBtn"
+                android:layout_toRightOf="@id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hire"
+                android:padding="6dp"
+                android:textSize="8dp"
+                android:textColor="@color/white"
+                android:background="@drawable/circle_shape"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
