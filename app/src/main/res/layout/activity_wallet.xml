@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout"
+    android:layout_gravity="right"
+    tools:context=".WalletActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+
+            >
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:drawableLeft="@drawable/ic_back_btn_24"
+                android:background="@android:color/transparent"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_wallet"
+                android:background="@android:color/transparent"
+                android:textColor="@color/colorPrimary"
+                android:text="Wallet"
+
+
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_hamburger"
+                android:id="@+id/hamburger"
+                android:background="@android:color/transparent"
+
+                />
+        </RelativeLayout>
+        <View
+            android:background="@color/splashbg"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tool_bar"
+            android:id="@+id/line1"
+            android:layout_height="1dp"/>
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_below="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        android:padding="17dp"
+
+
+        >
+
+
+        <com.marozzi.segmentedtab.SegmentedGroup
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            app:sg_background_color="@android:color/transparent"
+            app:sg_background_color_selected="@color/colorAccent"
+            app:sg_corner_color="@color/grey"
+            app:sg_corner_radius="25dp"
+            app:sg_corner_size="1dp"
+            app:sg_text_color="@color/grey"
+            app:sg_text_color_selected="@android:color/white"
+           >
+
+            <com.marozzi.segmentedtab.SegmentedTab
+                android:id="@+id/element_one_one"
+                android:layout_width="wrap_content"
+                android:drawableLeft="@drawable/ic_wallet_15_grey"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/grey"
+
+                android:text="top-up"/>
+
+            <com.marozzi.segmentedtab.SegmentedTab
+                android:id="@+id/element_one_two"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Withraw"
+                android:textColor="@color/grey"
+                android:drawableLeft="@drawable/ic_wallet_15_grey"/>
+
+            <com.marozzi.segmentedtab.SegmentedTab
+                android:id="@+id/element_one_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/grey"
+                android:drawableLeft="@drawable/ic_wallet_15_grey"
+                android:text="Payment"/>
+
+        </com.marozzi.segmentedtab.SegmentedGroup>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+
+        android:background="@drawable/jobcardbackground"
+        android:id="@+id/nv">
+        <include layout="@layout/nav_header"
+            android:padding="5dp"></include>
+
+        <View
+            android:background="@color/splashbg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_feed_15"
+                    android:padding="7dp"
+                    android:onClick="FeedActivity"
+                    android:text="Feed"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="8dp"
+                    tools:capitalize="none" />
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="report"
+                    android:textSize="8dp"
+                    android:padding="7dp"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_report_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wallet"
+                    android:onClick="wallet"
+                    android:padding="7dp"
+                    android:textSize="8dp"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_wallet_15"
+                    android:textColor="@color/colorPrimary"/>
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+
+                <Button
+                    android:id="@+id/payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment"
+                    android:padding="7dp"
+                    android:textSize="8dp"
+                    android:onClick="PaymentActivity"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_wallet_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:padding="7dp"
+                    android:onClick="Settings"
+                    android:textSize="8dp"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_settings_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:padding="7dp"
+                    android:textSize="8dp"
+                    android:onClick="logout"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_logout_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:textSize="8dp"
+                    android:padding="7dp"
+                    android:onClick="about"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_about_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textSize="8dp"
+                    android:padding="7dp"
+                    android:onClick="contact"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_contact_us_15"
+                    android:textColor="@color/colorPrimary"/>
+
+
+
+
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
