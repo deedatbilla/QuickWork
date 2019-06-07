@@ -5,12 +5,14 @@
 
     <!-- view background color -->
     <solid
-        android:color="@color/light_grey" >
+        android:color="@android:color/holo_red_dark" >
     </solid>
+
     <!-- Here is the corner radius -->
     <corners
-        android:topRightRadius="10dp"
-        android:bottomRightRadius="10dp">
+       android:topRightRadius="20dp"
+        android:bottomRightRadius="20dp"
+        >
     </corners>
 
 

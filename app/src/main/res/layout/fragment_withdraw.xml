@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ReportActivity"
+    >
+
+
+
+    <RelativeLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+
+
+        <RelativeLayout
+            android:layout_below="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:id="@+id/container"
+            android:background="@drawable/walletbg"
+            android:padding="15dp"
+
+
+            >
+
+            <TextView
+                android:id="@+id/currentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outlet/"
+                android:layout_marginLeft="9dp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_below="@id/currentText"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/wallet_balance"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/white"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="325.85"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12sp"
+                    android:inputType="textEmailAddress"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/ic_login_edit_text"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/payment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose payment"
+                android:layout_below="@id/wallet_balance"
+                android:layout_marginLeft="9dp"
+                android:textColor="@color/colorPrimary"
+                />
+
+
+
+            <LinearLayout
+                android:layout_below="@id/payment_text"
+                android:layout_width="match_parent"
+                android:id="@+id/types"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:background="@drawable/walletbg"
+                android:backgroundTint="@color/white">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MTN Mobile Money"
+                        />
+
+                   <RadioButton
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View
+                    android:background="@color/light_grey"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Airtel Tigo Money"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View
+                    android:background="@color/light_grey"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vodafone Cash"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"/>
+                </RelativeLayout>
+                <View
+                    android:background="@color/light_grey"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Credit Card"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:checked="true" />
+                </RelativeLayout>
+                <View
+                    android:background="@color/light_grey"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Top-up amount"
+                        />
+
+                    <TextView
+                        android:layout_alignParentEnd="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="nov 2018"
+                        />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/credit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit"
+                android:layout_below="@id/types"
+                android:layout_marginLeft="9dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginTop="12dp"
+
+                />
+
+            <LinearLayout
+                android:layout_below="@id/credit_text"
+                android:layout_width="match_parent"
+                android:id="@+id/card_details"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:background="@drawable/walletbg"
+                android:backgroundTint="@color/white">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    >
+
+              <ImageView
+                  android:id="@+id/card_type"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                    />
+                    <TextView
+                        android:layout_toRightOf="@id/card_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4623 **** **** ****"
+                        />
+
+
+                </RelativeLayout>
+                <View
+                    android:background="@color/light_grey"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="1dp"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="mm / yy"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/CVV"
+                        android:layout_alignParentEnd="true"
+                        />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+            <Button
+                android:layout_below="@id/card_details"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Deposit"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp"
+                android:background="@drawable/ic_button_style"/>
+
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>

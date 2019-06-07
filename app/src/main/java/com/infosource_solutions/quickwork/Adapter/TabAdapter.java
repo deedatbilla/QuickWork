@@ -1,4 +1,4 @@
-package com.infosource_solutions.quickwork;
+package com.infosource_solutions.quickwork.Adapter;
 
 import android.content.Context;
 import android.graphics.PorterDuff;
@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.infosource_solutions.quickwork.R;
+
 import java.util.ArrayList;
 import java.util.List;
 public class TabAdapter extends FragmentStatePagerAdapter {
@@ -18,7 +21,7 @@ public class TabAdapter extends FragmentStatePagerAdapter {
     private final List<String> mFragmentTitleList = new ArrayList<>();
     private final List<Integer> mFragmentIconList = new ArrayList<>();
     private Context context;
-    TabAdapter(FragmentManager fm, Context context) {
+    public TabAdapter(FragmentManager fm, Context context) {
         super(fm);
         this.context = context;
     }
@@ -59,4 +62,6 @@ public class TabAdapter extends FragmentStatePagerAdapter {
         tabImageView.setColorFilter(ContextCompat.getColor(context, R.color.colorPrimary), PorterDuff.Mode.SRC_ATOP);
         return view;
     }
+
+
 }

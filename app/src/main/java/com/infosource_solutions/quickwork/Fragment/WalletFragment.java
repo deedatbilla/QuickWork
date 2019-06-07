@@ -1,4 +1,4 @@
-package com.infosource_solutions.quickwork;
+package com.infosource_solutions.quickwork.Fragment;
 
 
 import android.os.Bundle;
@@ -7,14 +7,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.infosource_solutions.quickwork.R;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class My extends Fragment {
+public class WalletFragment extends Fragment {
 
 
-    public My() {
+    public WalletFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +24,7 @@ public class My extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_my, container, false);
+        return inflater.inflate(R.layout.fragment_wallet, container, false);
     }
 
 }

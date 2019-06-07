@@ -1,7 +1,5 @@
-package com.infosource_solutions.quickwork;
+package com.infosource_solutions.quickwork.Activity;
 
-import android.app.ActivityOptions;
-import android.os.Build;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -10,12 +8,11 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.transition.Fade;
-import android.transition.Slide;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.infosource_solutions.quickwork.R;
 
 
 public class Category extends AppCompatActivity {

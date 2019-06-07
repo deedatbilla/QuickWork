@@ -1,13 +1,10 @@
-package com.infosource_solutions.quickwork;
+package com.infosource_solutions.quickwork.Activity;
 
 import android.content.Intent;
 import android.graphics.Paint;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.ImageSpan;
 import android.transition.Fade;
 import android.util.Log;
 import android.view.View;
@@ -23,19 +20,17 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
-import com.facebook.login.LoginManager;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.tasks.Task;
+import com.infosource_solutions.quickwork.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -68,7 +63,7 @@ public class SignIn extends AppCompatActivity implements GoogleApiClient.OnConne
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(SignIn.this,MainDash.class);
+                Intent intent=new Intent(SignIn.this, MainDash.class);
                 startActivity(intent);
             }
         });

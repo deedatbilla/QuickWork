@@ -1,4 +1,4 @@
-package com.infosource_solutions.quickwork;
+package com.infosource_solutions.quickwork.Activity;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
+import com.infosource_solutions.quickwork.R;
 
 public class PhotoOptionsSheet extends BottomSheetDialogFragment {
 

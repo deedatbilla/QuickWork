@@ -1,9 +1,9 @@
-package com.infosource_solutions.quickwork;
+package com.infosource_solutions.quickwork.Activity;
 
 import android.content.Intent;
-import android.provider.SyncStateContract;
 
 import com.daimajia.androidanimations.library.Techniques;
+import com.infosource_solutions.quickwork.R;
 import com.viksaa.sssplash.lib.activity.AwesomeSplash;
 import com.viksaa.sssplash.lib.cnst.Flags;
 import com.viksaa.sssplash.lib.model.ConfigSplash;

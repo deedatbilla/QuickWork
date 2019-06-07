@@ -8,88 +8,68 @@
     android:fitsSystemWindows="true"
     android:id="@+id/drawer_layout"
     android:layout_gravity="right"
-    tools:context=".MainDash">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    tools:context=".Activity.MainDash">
 
     <RelativeLayout
-        android:id="@+id/tool_bar"
-        android:layout_width="match_parent"
-        app:contentInsetLeft="0dp"
-        app:contentInsetStart="0dp"
-        android:layout_height="?android:attr/actionBarSize"
-     >
-
-    <Button
-        android:id="@+id/search_bar"
-        android:layout_centerInParent="true"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Search"
-
-        android:textAlignment="textStart"
-        android:paddingStart="20dp"
-        android:textAllCaps="false"
-        android:textColor="@color/grey"
-
-        android:background="@drawable/search_btn"/>
-
-   <ImageButton
-       android:layout_toRightOf="@id/search_bar"
-       android:layout_margin="10dp"
-       android:id="@+id/hamburger"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:src="@drawable/menu_icon"
-       android:background="@android:color/transparent"
 
 
-
-    />
-    </RelativeLayout>
-<LinearLayout
-    android:id="@+id/tab"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_below="@+id/tool_bar">
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="?actionBarSize"
-
-        app:tabGravity="fill"
-        app:tabTextColor="@color/grey"
-        app:tabIndicatorColor="@color/colorPrimary"
-        app:tabIndicatorHeight="1dp"
-        app:tabIndicatorFullWidth="false"
-        app:tabSelectedTextColor="@color/colorPrimary"
-        app:tabMode="fixed">
-    </android.support.design.widget.TabLayout>
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+        android:id="@+id/relative_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </android.support.v4.view.ViewPager>
+        <RelativeLayout
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:layout_height="?android:attr/actionBarSize"
+            >
+
+            <Button
+                android:id="@+id/search_bar"
+                android:layout_centerInParent="true"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Search"
+                android:textAlignment="textStart"
+                android:paddingStart="20dp"
+                android:textAllCaps="false"
+                android:textColor="@color/grey"
+
+                android:background="@drawable/search_btn"/>
+
+            <ImageView
+                android:layout_toRightOf="@id/search_bar"
+                android:layout_margin="10dp"
+                android:id="@+id/hamburger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_hamburger"
+                android:background="@android:color/transparent"/>
 
 
 
+        </RelativeLayout>
 
-</LinearLayout>
+        <FrameLayout
+            android:layout_below="@+id/tool_bar"
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+        </FrameLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_gravity="right"
+
         android:background="@drawable/jobcardbackground"
         android:id="@+id/nv">
-        <include layout="@layout/nav_header"></include>
+        <include layout="@layout/nav_header"
+            android:padding="5dp"></include>
 
         <View
             android:background="@color/splashbg"
@@ -97,42 +77,142 @@
             android:layout_height="1dp"/>
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="5dp">
            <LinearLayout
                android:layout_width="match_parent"
                android:layout_height="match_parent"
-               android:orientation="vertical">
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="feed"
-    android:padding="10dp"
-    android:textColor="@color/colorPrimary"/>
+               android:orientation="vertical"
+               >
+
+               <Button
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:background="@android:color/transparent"
+                   android:drawableLeft="@drawable/ic_feed_15"
+                   android:padding="7dp"
+                   android:onClick="FeedActivity"
+                   android:text="Feed"
+                   android:textColor="@color/colorPrimary"
+                   android:textSize="8dp"
+                   tools:capitalize="none" />
                <View
                    android:background="@color/splashbg"
                    android:layout_width="match_parent"
                    android:layout_height="1dp"/>
-               <TextView
+               <Button
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
                    android:text="report"
-                   android:padding="10dp"
+                   android:textSize="8dp"
+                   android:onClick="ReportActivity"
+                   android:padding="7dp"
+                   android:background="@android:color/transparent"
+                   android:drawableLeft="@drawable/ic_report_15"
                    android:textColor="@color/colorPrimary"/>
 
                <View
                    android:background="@color/splashbg"
                    android:layout_width="match_parent"
                    android:layout_height="1dp"/>
-               <TextView
+               <Button
+                   android:id="@+id/wallet"
                    android:layout_width="wrap_content"
                    android:layout_height="wrap_content"
-                   android:text="wallet"
-                   android:padding="10dp"
+                   android:text="Wallet"
+                   android:onClick="wallet"
+                   android:padding="7dp"
+                   android:textSize="8dp"
+                   android:background="@android:color/transparent"
+                   android:drawableLeft="@drawable/ic_wallet_15"
                    android:textColor="@color/colorPrimary"/>
                <View
                    android:background="@color/splashbg"
                    android:layout_width="match_parent"
                    android:layout_height="1dp"/>
+
+
+               <Button
+                   android:id="@+id/payment"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Payment"
+                   android:padding="7dp"
+                   android:textSize="8dp"
+                   android:onClick="PaymentActivity"
+                   android:background="@android:color/transparent"
+                   android:drawableLeft="@drawable/ic_wallet_15"
+                   android:textColor="@color/colorPrimary"/>
+
+               <View
+                   android:background="@color/splashbg"
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"/>
+               <Button
+                   android:id="@+id/settings"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Settings"
+                   android:padding="7dp"
+                   android:onClick="Settings"
+                   android:textSize="8dp"
+                   android:background="@android:color/transparent"
+                   android:drawableLeft="@drawable/ic_settings_15"
+                   android:textColor="@color/colorPrimary"/>
+
+               <View
+                   android:background="@color/splashbg"
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"/>
+               <Button
+                   android:id="@+id/logout"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Logout"
+                   android:padding="7dp"
+                   android:textSize="8dp"
+                   android:onClick="logout"
+                   android:background="@android:color/transparent"
+                   android:drawableLeft="@drawable/ic_logout_15"
+                   android:textColor="@color/colorPrimary"/>
+
+               <View
+                   android:background="@color/splashbg"
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"/>
+               <Button
+                   android:id="@+id/about"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="About"
+                   android:textSize="8dp"
+                   android:onClick="about"
+                   android:padding="7dp"
+                   android:background="@android:color/transparent"
+                   android:drawableLeft="@drawable/ic_about_15"
+                   android:textColor="@color/colorPrimary"/>
+
+               <View
+                   android:background="@color/splashbg"
+                   android:layout_width="match_parent"
+                   android:layout_height="1dp"/>
+               <Button
+                   android:id="@+id/contact"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Contact"
+                   android:textSize="8dp"
+                   android:onClick="contact"
+                   android:padding="7dp"
+                   android:background="@android:color/transparent"
+                   android:drawableLeft="@drawable/ic_contact_us_15"
+                   android:textColor="@color/colorPrimary"/>
+
+
+
+
+
+
            </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
     </LinearLayout>

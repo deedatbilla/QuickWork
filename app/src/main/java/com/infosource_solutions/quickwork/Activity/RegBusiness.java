@@ -1,7 +1,9 @@
-package com.infosource_solutions.quickwork;
+package com.infosource_solutions.quickwork.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.infosource_solutions.quickwork.R;
 
 public class RegBusiness extends AppCompatActivity {
 

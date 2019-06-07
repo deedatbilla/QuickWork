@@ -12,8 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ContactActivity"></activity>
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".WalletActivity" />
+        <activity android:name=".ReportActivity" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".Activity.SplashScreen"
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -23,8 +29,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Category" />
-        <activity android:name=".SignIn" />
+        <activity android:name=".Activity.Category" />
+        <activity android:name=".Activity.SignIn" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -34,9 +40,9 @@
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name" />
-        <activity android:name=".RegFreelancer" />
-        <activity android:name=".RegBusiness" />
-        <activity android:name=".MainDash"></activity>
+        <activity android:name=".Activity.RegFreelancer" />
+        <activity android:name=".Activity.RegBusiness" />
+        <activity android:name=".Activity.MainDash" />
     </application>
 
 </manifest>

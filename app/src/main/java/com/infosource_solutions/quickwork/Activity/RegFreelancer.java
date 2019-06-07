@@ -1,14 +1,10 @@
-package com.infosource_solutions.quickwork;
+package com.infosource_solutions.quickwork.Activity;
 
-import android.animation.AnimatorListenerAdapter;
-import android.animation.ObjectAnimator;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.transition.Fade;
 import android.transition.Slide;
-import android.transition.TransitionInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,11 +15,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.hbb20.CountryCodePicker;
+import com.infosource_solutions.quickwork.R;
 import com.tomergoldst.tooltips.ToolTip;
-import com.tomergoldst.tooltips.ToolTipAnimator;
 import com.tomergoldst.tooltips.ToolTipsManager;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RegFreelancer extends AppCompatActivity implements ToolTipsManager.TipListener,PhotoOptionsSheet.BottomSheetListener {
 

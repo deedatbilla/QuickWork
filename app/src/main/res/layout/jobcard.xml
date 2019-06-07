@@ -43,6 +43,7 @@
             android:layout_height="wrap_content"
             android:text="As an example, you might have common UI elements that you intend to show in some areas of your app while hiding them in other"
             android:textSize="10dp"
+
             android:layout_below="@id/occupation"
             android:textColor="@color/black"/>
     </RelativeLayout>
@@ -140,14 +141,14 @@
             <Button
                 android:layout_alignParentEnd="true"
                 android:id="@+id/hireBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
                 android:text="hire"
                 android:padding="8dp"
                 android:elevation="0dp"
                 android:textColor="@color/colorPrimary"
                 android:drawableLeft="@drawable/ic_add_blue"
-                android:background="@drawable/btnbg"
+                android:background="@drawable/ic_button_style"
                 style="android:attr/buttonBarButtonStyle"
 
 

@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="right"
+    android:fitsSystemWindows="true"
+    android:id="@+id/drawer_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ReportActivity"
+    >
+
+
+
+    <RelativeLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+    android:id="@+id/tool_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+
+    >
+
+    <Button
+    android:id="@+id/backButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:drawableLeft="@drawable/ic_back_btn_24"
+    android:background="@android:color/transparent"
+
+    />
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:drawableLeft="@drawable/ic_report"
+    android:background="@android:color/transparent"
+    android:textColor="@color/colorPrimary"
+    android:text="Report"
+
+
+    />
+
+    <ImageView
+        android:id="@+id/hamburger"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:src="@drawable/ic_hamburger"
+    android:background="@android:color/transparent"
+
+    />
+    </RelativeLayout>
+        <View
+            android:background="@color/splashbg"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/tool_bar"
+            android:id="@+id/line1"
+            android:layout_height="1dp"/>
+
+        <RelativeLayout
+            android:layout_below="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:id="@+id/container"
+            android:background="@drawable/walletbg"
+            android:padding="25dp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            >
+
+            <TextView
+                android:id="@+id/currentText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outlet/"
+                android:layout_marginLeft="9dp"
+                android:textColor="@color/colorPrimary"
+                />
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_below="@id/currentText"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/wallet_balance"
+                app:boxCornerRadiusBottomEnd="20dp"
+                app:boxCornerRadiusBottomStart="20dp"
+                app:boxCornerRadiusTopEnd="20dp"
+                app:boxCornerRadiusTopStart="20dp"
+                android:layout_marginBottom="16dp"
+                android:layout_width="match_parent"
+                android:backgroundTint="@color/white"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:text="325.85"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="12sp"
+                    android:inputType="textEmailAddress"
+                    android:backgroundTint="@color/white"
+                    android:background="@drawable/ic_login_edit_text"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/periodtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Period"
+                android:layout_below="@id/wallet_balance"
+                android:layout_marginLeft="9dp"
+                android:textColor="@color/colorPrimary"
+                />
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_below="@id/periodtext"
+                android:background="@drawable/ic_login_edit_text"
+
+                android:spinnerMode="dropdown">
+
+            </Spinner>
+
+            <LinearLayout
+                android:id="@+id/shortDesc"
+                android:layout_below="@+id/spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:padding="10dp">
+                <TextView
+                  android:id="@+id/target_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Target"
+                    android:layout_marginRight="48dp"
+                    android:layout_gravity="left"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/ar_text"
+                    android:layout_toRightOf="@id/target_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Ar-"
+
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_toRightOf="@id/ar_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Balance"
+                    android:layout_marginLeft="46dp"
+                   android:layout_alignParentEnd="true"
+                    android:textColor="@color/colorPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/information"
+                android:layout_below="@+id/shortDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:gravity="center"
+
+                android:layout_centerInParent="true">
+
+                <LinearLayout
+                    android:id="@+id/target"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/report_target_bg"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="850,000"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cases"
+                        android:textColor="@color/white"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_percent"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey"
+                            android:text="100%"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ar"
+                   android:layout_toRightOf="@+id/target"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/ar_bg"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="850,000"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cases"
+                        android:textColor="@color/white"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_percent"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey"
+                            android:text="50%"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/balance"
+                    android:layout_toRightOf="@id/ar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/balance_bg"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="850,000"
+                        android:textColor="@color/white"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cases"
+                        android:textColor="@color/white"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_percent"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/grey"
+                            android:text="50%"
+                            />
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@+id/information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+                <TextView
+                    android:id="@+id/comment_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Comment"
+                    android:layout_marginLeft="9dp"
+                    android:textColor="@color/colorPrimary"/>
+                <android.support.design.widget.TextInputLayout
+                    android:layout_below="@id/comment_text"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:id="@+id/comment_layout"
+                    app:boxCornerRadiusBottomEnd="20dp"
+                    app:boxCornerRadiusBottomStart="20dp"
+                    app:boxCornerRadiusTopEnd="20dp"
+                    app:boxCornerRadiusTopStart="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_width="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:background="@drawable/ic_login_edit_text"
+                        android:backgroundTint="@color/white"
+                        android:inputType="textLongMessage|textMultiLine"
+                        android:paddingStart="15dp"
+                        android:paddingEnd="10dp"
+
+                        android:text="@string/Random_text"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </RelativeLayout>
+
+
+
+            <!--<Button-->
+                <!--android:layout_below="@id/summary"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:textColor="@color/colorPrimary"-->
+                <!--android:text="Cancel"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_margin="20dp"-->
+                <!--android:background="@drawable/ic_button_style"/>-->
+
+
+
+
+        </RelativeLayout>
+
+        <View
+            android:background="@color/splashbg"
+            android:layout_above="@+id/actions"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+
+<RelativeLayout
+    android:id="@+id/actions"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:layout_alignParentBottom="true"
+    >
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:background="@android:color/transparent"
+            android:text="Approve"/>
+
+    <Button
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:text="  Request"
+
+        android:textColor="@color/grey" />
+</RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+
+        android:background="@drawable/jobcardbackground"
+        android:id="@+id/nv">
+        <include layout="@layout/nav_header"
+            android:padding="5dp"></include>
+
+        <View
+            android:background="@color/splashbg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_feed_15"
+                    android:padding="7dp"
+                    android:onClick="FeedActivity"
+                    android:text="Feed"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="8dp"
+                    tools:capitalize="none" />
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="report"
+                    android:textSize="8dp"
+                    android:padding="7dp"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_report_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wallet"
+                    android:onClick="wallet"
+                    android:padding="7dp"
+                    android:textSize="8dp"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_wallet_15"
+                    android:textColor="@color/colorPrimary"/>
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+
+
+                <Button
+                    android:id="@+id/payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment"
+                    android:padding="7dp"
+                    android:textSize="8dp"
+                    android:onClick="PaymentActivity"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_wallet_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:padding="7dp"
+                    android:onClick="Settings"
+                    android:textSize="8dp"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_settings_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:padding="7dp"
+                    android:textSize="8dp"
+                    android:onClick="logout"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_logout_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/about"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:textSize="8dp"
+                    android:padding="7dp"
+                    android:onClick="about"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_about_15"
+                    android:textColor="@color/colorPrimary"/>
+
+                <View
+                    android:background="@color/splashbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <Button
+                    android:id="@+id/contact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contact"
+                    android:textSize="8dp"
+                    android:padding="7dp"
+                    android:onClick="contact"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/ic_contact_us_15"
+                    android:textColor="@color/colorPrimary"/>
+
+
+
+
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

@@ -29,7 +29,7 @@
         android:textSize="20dp"
         android:layout_margin="10dp"
         />
-    <LinearLayout
+    <RelativeLayout
        android:layout_toRightOf="@id/profile_image"
         android:layout_below="@id/rest_text"
         android:layout_width="match_parent"
@@ -113,21 +113,18 @@
 
         <Button
             android:id="@+id/hireBtn"
-
+            android:textSize="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@id/location_text"
-            android:background="@drawable/btnbg"
+            android:background="@drawable/ic_button_style"
             android:contentDescription="hire"
             style="android:attr/buttonBarButtonStyle"
-
             android:padding="8dp"
             android:elevation="0dp"
-            android:drawableLeft="@drawable/ic_delete_forever_black_24dp"
+            android:drawableLeft="@drawable/ic_delete"
             android:text="delete"
-
-
             android:textColor="@color/colorPrimary" />
 
-    </LinearLayout>
+    </RelativeLayout>
 </RelativeLayout>
