@@ -27,6 +27,8 @@ import com.infosource_solutions.quickwork.Fragment.FreeLancer;
 import com.infosource_solutions.quickwork.Fragment.Messages;
 import com.infosource_solutions.quickwork.Fragment.My;
 import com.infosource_solutions.quickwork.Fragment.WalletFragment;
+import com.marozzi.segmentedtab.SegmentedGroup;
+import com.marozzi.segmentedtab.SegmentedTab;
 
 public class WalletActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
@@ -36,7 +38,7 @@ public class WalletActivity extends AppCompatActivity {
     TabItem topup,withdraw;
     RelativeLayout toolbar;
     private TabAdapter adapter;
-    private TabLayout tabLayout;
+    private SegmentedGroup tabLayout;
     private ViewPager viewPager;
     private int[] tabIcons = {
             R.drawable.ic_wallet_15,
@@ -53,33 +55,25 @@ public class WalletActivity extends AppCompatActivity {
         fragment = new WalletFragment();
         loadFragment(fragment);
         ImageView hamburger=findViewById(R.id.hamburger);
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        tabLayout = (SegmentedGroup) findViewById(R.id.tabLayout);
+
+        tabLayout.setOnSegmentedGroupListener(new SegmentedGroup.OnSegmentedGroupListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                if(tabLayout.getSelectedTabPosition()==0){
-                    topupfrag();
+            public void onSegmentedTabSelected(SegmentedTab tab, int checkedId) {
+                 if(tab.getText().equals("top-up")){
+                     topupfrag();
+                 } else if (tab.getText().equals("Withraw")) {
 
+                     withdrawfrag();
+                 }
+                 else  if (tab.getText().equals("Payment")){
+                     paymentfrag();
+                 }
 
-                }
-                else if (tabLayout.getSelectedTabPosition()==1){
-                    withdrawfrag();
-                }
-                else if (tabLayout.getSelectedTabPosition()==2){
-                    paymentfrag();
-                }
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
 
             }
         });
+
         mDrawerLayout = findViewById(R.id.drawer_layout);
         t = new ActionBarDrawerToggle(this, mDrawerLayout,R.string.Open, R.string.Close);
         mDrawerLayout.addDrawerListener(t);
@@ -100,18 +94,7 @@ public class WalletActivity extends AppCompatActivity {
 
 
     }
-    private void highLightCurrentTab(int position) {
-        for (int i = 0; i < tabLayout.getTabCount(); i++) {
-            TabLayout.Tab tab = tabLayout.getTabAt(i);
-            assert tab != null;
-            tab.setCustomView(null);
-            tab.setCustomView(adapter.getTabView(i));
-        }
-        TabLayout.Tab tab = tabLayout.getTabAt(position);
-        assert tab != null;
-        tab.setCustomView(null);
-        tab.setCustomView(adapter.getSelectedTabView(position));
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
